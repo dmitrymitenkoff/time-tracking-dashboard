@@ -5,36 +5,12 @@ const daily = document.querySelector('#daily');
 const weekly = document.querySelector('#weekly');
 const monthly = document.querySelector('#monthly');
 
-function populateDaily() {
-  let datacounter = 0;
-  cards.forEach(card => {
-    const workHours = card.querySelector('.stats__hrs--num');
-    const prevWeekHrs = card.querySelector('.stats__prev__hrs');
-    workHours.textContent = data[datacounter].timeframes.daily.current;
-    prevWeekHrs.textContent = data[datacounter].timeframes.daily.previous;
-    datacounter++;
-  });
-}
-
-function populateWeekly() {
-  let datacounter = 0;
-  cards.forEach(card => {
-    const workHours = card.querySelector('.stats__hrs--num');
-    const prevWeekHrs = card.querySelector('.stats__prev__hrs');
-    workHours.textContent = data[datacounter].timeframes.weekly.current;
-    prevWeekHrs.textContent = data[datacounter].timeframes.weekly.previous;
-    datacounter++;
-  });
-}
-
-function populateMonthly() {
-  let datacounter = 0;
-  cards.forEach(card => {
-    const workHours = card.querySelector('.stats__hrs--num');
-    const prevWeekHrs = card.querySelector('.stats__prev__hrs');
-    workHours.textContent = data[datacounter].timeframes.monthly.current;
-    prevWeekHrs.textContent = data[datacounter].timeframes.monthly.previous;
-    datacounter++;
+function populateStats(period) {
+  cards.forEach((card, index) => {
+    const currentHrs = card.querySelector('.stats__hrs--num');
+    const previousHours = card.querySelector('.stats__prev__hrs');
+    currentHrs.textContent = data[index].timeframes[period].current;
+    previousHours.textContent = data[index].timeframes[period].previous;
   });
 }
 
@@ -42,19 +18,19 @@ daily.addEventListener('click', () => {
   weekly.classList.remove('selected');
   monthly.classList.remove('selected');
   daily.classList.add('selected');
-  populateDaily();
+  populateStats('daily');
 });
 
 weekly.addEventListener('click', () => {
   daily.classList.remove('selected');
   monthly.classList.remove('selected');
   weekly.classList.add('selected');
-  populateWeekly();
+  populateStats('weekly');
 });
 
 monthly.addEventListener('click', () => {
   daily.classList.remove('selected');
   monthly.classList.add('selected');
   weekly.classList.remove('selected');
-  populateMonthly();
+  populateStats('monthly');
 });
