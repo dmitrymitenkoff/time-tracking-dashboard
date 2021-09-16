@@ -1,0 +1,26 @@
+@use "abstracts/variables" as *;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  display: grid;
+}
+
+body {
+  font-family: $font-rubik;
+  font-size: 1.8rem;
+  background-color: $very-dark-blue;
+}

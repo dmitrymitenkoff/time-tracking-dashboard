@@ -1,0 +1,80 @@
+@use "../abstracts/variables" as *;
+@use "../base/utilities" as *;
+@use "../abstracts/mixins" as *;
+
+section {
+  margin-bottom: $margin-bottom-card;
+}
+
+.stats {
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+
+  &--work {
+    background-color: $red-work;
+  }
+  &--play {
+    background-color: $blue-play;
+  }
+  &--study {
+    background-color: $red-study;
+  }
+  &--exercise {
+    background-color: $lime-exercise;
+  }
+  &--social {
+    background-color: $violet-social;
+  }
+  &--selfcare {
+    background-color: $orange-selfcare;
+  }
+
+  .bg {
+    @include bg-size-card-mobile;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    overflow: hidden;
+
+    img {
+      max-width: 7.8rem;
+      float: right;
+    }
+  }
+
+  .stats--work .bg {
+    background-color: $red-work;
+  }
+  .stats--play .bg {
+    background-color: $blue-play;
+  }
+  .stats--study .bg {
+    background-color: $red-study;
+  }
+  .stats--exercise .bg {
+    background-color: $lime-exercise;
+  }
+  .stats--social .bg {
+    background-color: $violet-social;
+  }
+  .stats--selfcare .bg {
+    background-color: $orange-selfcare;
+  }
+
+  .content {
+    background-color: $dark-blue;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    padding: 2.8rem 2.4rem;
+    border: 0.1rem solid $dark-blue;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $card-hover;
+      border-color: $card-hover;
+    }
+  }
+}

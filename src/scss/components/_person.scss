@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+@use "../base/utilities" as *;
+@use "../abstracts/mixins" as *;
+
+.person {
+  // max-width: 32.7rem;
+  background-color: $dark-blue;
+  border-radius: $border-radius;
+
+  &__card {
+    background-color: $blue;
+    border-radius: $border-radius;
+    padding: 3.5rem 3.2rem;
+  }
+
+  &__avatar {
+    width: 6.4rem;
+  }
+
+  &__period {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    padding: 2.4rem 3.2rem;
+  }
+}

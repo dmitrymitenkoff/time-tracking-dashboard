@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="./scss/main.scss">
+  <title>Time tracking dashboard</title>
+</head>
+<body>
+
+  <main class="site">
+    <section class="person">
+      <div class="person__card">
+        <img class="person__avatar" src="./images/image-jeremy.png" alt="Avatar image"> 
+        <p class="person__report">Report for</p>
+        <h1>Jeremy Robson</h1>
+      </div>
+      <ul class="person__period">
+        <li id="daily">Daily</li>
+        <li id="weekly">Weekly</li>
+        <li id="monthly">Monthly</li>
+      </ul>
+    </section>
+
+    <section class="stats stats--work">
+      <div class="bg">
+        <img src="images/icon-work.svg" alt="Icon work">
+      </div>
+      <div class="content">
+        <h2>Work</h2>
+        <p class="stats__hrs"><span class="stats__hrs--num">32</span>hrs</p>
+        <img class="prevBtn" src="images/icon-ellipsis.svg" alt="Icon ellipsis">
+        <p class="prev__hrs">Last Week - <span class="stats__prev__hrs">36</span>hrs</p>
+      </div>
+    </section>
+
+    <section class="stats stats--play">
+      <div class="bg">
+        <img src="images/icon-play.svg" alt="Icon play">
+      </div>
+      <div class="content">
+        <h2>Play</h2>
+        <p class="stats__hrs"><span class="stats__hrs--num">10</span>hrs</p>
+        <img class="prevBtn" src="images/icon-ellipsis.svg" alt="Icon ellipsis">
+        <p class="prev__hrs">Last Week - <span class="stats__prev__hrs">36</span>hrs</p>
+      </div>
+    </section>
+    <section class="stats stats--study">
+      <div class="bg">
+        <img src="images/icon-study.svg" alt="Icon study">
+      </div>
+      <div class="content">
+        <h2>Study</h2>
+        <p class="stats__hrs"><span class="stats__hrs--num">4</span>hrs</p>
+        <img class="prevBtn" src="images/icon-ellipsis.svg" alt="Icon ellipsis">
+        <p class="prev__hrs">Last Week - <span class="stats__prev__hrs">7</span>hrs</p>
+      </div>
+    </section>
+    <section class="stats stats--exercise">
+      <div class="bg">
+        <img src="images/icon-exercise.svg" alt="Icon exercise">
+      </div>
+      <div class="content">
+        <h2>Exercise</h2>
+        <p class="stats__hrs"><span class="stats__hrs--num">4</span>hrs</p>
+        <img class="prevBtn" src="images/icon-ellipsis.svg" alt="Icon ellipsis">
+        <p class="prev__hrs">Last Week - <span class="stats__prev__hrs">5</span>hrs</p>
+      </div>
+    </section>
+    <section class="stats stats--social">
+      <div class="bg">
+        <img src="images/icon-social.svg" alt="Icon social">
+      </div>
+      <div class="content">
+        <h2>Social</h2>
+        <p class="stats__hrs"><span class="stats__hrs--num">5</span>hrs</p>
+        <img class="prevBtn" src="images/icon-ellipsis.svg" alt="Icon ellipsis">
+        <p class="prev__hrs">Last Week - <span class="stats__prev__hrs">10</span>hrs</p>
+      </div>
+    </section>
+    <section class="stats stats--selfcare">
+      <div class="bg">
+        <img src="images/icon-self-care.svg" alt="Icon self care">
+      </div>
+      <div class="content">
+        <h2>Self Care</h2>
+        <p class="stats__hrs"><span class="stats__hrs--num">2</span>hrs</p>
+        <img class="prevBtn" src="images/icon-ellipsis.svg" alt="Icon ellipsis">
+        <p class="prev__hrs">Last Week - <span class="stats__prev__hrs">2</span>hrs</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+</html>
