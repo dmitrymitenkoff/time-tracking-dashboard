@@ -1,9 +1,7 @@
 const data = require('./data.json');
 
 const cards = document.querySelectorAll('.content');
-const daily = document.querySelector('#daily');
-const weekly = document.querySelector('#weekly');
-const monthly = document.querySelector('#monthly');
+const buttons = document.querySelectorAll('button');
 
 function populateStats(period) {
   cards.forEach((card, index) => {
@@ -14,23 +12,19 @@ function populateStats(period) {
   });
 }
 
-daily.addEventListener('click', () => {
-  weekly.classList.remove('selected');
-  monthly.classList.remove('selected');
-  daily.classList.add('selected');
-  populateStats('daily');
-});
+buttons.forEach((button, index, btns) => {
+  button.addEventListener('click', () => {
+    // removes all 'selected' class from all buttons
+    btns.forEach(item => item.classList.remove('selected'));
+    // add 'selected' class to the active btn
+    button.classList.add('selected');
 
-weekly.addEventListener('click', () => {
-  daily.classList.remove('selected');
-  monthly.classList.remove('selected');
-  weekly.classList.add('selected');
-  populateStats('weekly');
-});
-
-monthly.addEventListener('click', () => {
-  daily.classList.remove('selected');
-  monthly.classList.add('selected');
-  weekly.classList.remove('selected');
-  populateStats('monthly');
+    if (button.id === 'daily') {
+      populateStats('daily');
+    } else if (button.id == 'weekly') {
+      populateStats('weekly');
+    } else {
+      populateStats('monthly');
+    }
+  });
 });
